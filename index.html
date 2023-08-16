@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/icons/favicon.png" />
+    <title>Home works Page for ADAS</title>
+    <link rel="stylesheet" href="./assets/fonts/font.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section id="main">
+        <div class="container">
+          <h1>ADAS üçün ev tapşırıqları</h1>
+          <div class="logo_img_box">
+            <img src="./assets/images/main_logo.svg" alt="ADAS logo image" />
+          </div>
+        </div>
+      </section>
+      <section id="homeworks">
+        <div class="container">
+          <ul>
+            <li>
+              <a href="./assets/pages/frontend-homewors.html"
+                >1. Frontend Tapşırıqları</a
+              >
+            </li>
+            <li>
+              <a href="./assets/pages/backend-homeworks.html"
+                >2. Backend Tapşırıqları</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script>
+      const links = document.querySelectorAll("#homeworks ul li a");
+      links.forEach((item, index) => {
+        const text = item.innerText;
+        item.innerText = "";
+
+        spell(item, text);
+      });
+
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function spell(item, text) {
+        for (let i = 0; i < text.length; i++) {
+          item.innerText += text[i];
+          await sleep(Math.random() * 100);
+        }
+      }
+    </script>
+  </body>
+</html>
