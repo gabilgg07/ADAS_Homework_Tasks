@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: montserrat, sans-serif, serif;
+  background-color: #eef1fc;
+  font-size: 14px;
+}
+
+header {
+  padding: 40px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+}
+
+nav ul li {
+  margin-right: 35px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+.link {
+  font-size: 16px;
+  color: #13274f;
+  opacity: 0.6;
+  transition: all 0.4s;
+  position: relative;
+  font-weight: 600;
+  padding: 14px 10px;
+}
+
+.link::after {
+  content: "";
+  height: 4px;
+  width: 0px;
+  border-radius: 25px;
+  background-color: #597fe2;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 26px);
+  transition: all 0.4s;
+}
+
+.link:hover,
+.link.active {
+  opacity: 1;
+}
+
+.link:hover::after,
+.link.active::after {
+  content: "";
+  width: 52px;
+}
+
+/* hero section start */
+.hero {
+  padding: 82px 0;
+}
+
+.hero__content_box {
+  width: 867px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.hero__desc {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.hero__down_links {
+  margin: 0 115px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__down_links--item {
+  width: 405px;
+  height: 278px;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 70px 0;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.hero__down_links--item--link {
+  display: inline-block;
+  padding: 18px 25px;
+  font-size: 18px;
+  color: #6d7593;
+  border: 4px solid #eef1fc;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.hero__down_links--item--info {
+  display: inline;
+  line-height: 20px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+}
+
+.hero__down_links--item.active,
+.hero__down_links--item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 15px 19px 0px rgb(33 76 157 / 20%);
+}
+
+.hero__down_links--item.active .hero__down_links--item--link,
+.hero__down_links--item:hover .hero__down_links--item--link {
+  background-color: #597fe2;
+  color: #fff;
+  border-color: #597fe2;
+}
+
+/* hero section end */
