@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend homeworks</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div>
+      <h1 data-heading="Backend homeworks" contenteditable>
+        Backend homeworks
+      </h1>
+    </div>
+    <a class="go-back" href="../../../index.html">Go Back</a>
+
+    <script>
+      var h1 = document.querySelector("h1");
+
+      h1.addEventListener("input", function () {
+        this.setAttribute("data-heading", this.innerText);
+      });
+    </script>
+  </body>
+</html>
