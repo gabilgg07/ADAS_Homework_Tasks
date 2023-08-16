@@ -158,3 +158,37 @@ nav ul li:last-child {
 }
 
 /* hero section end */
+
+/* footer start */
+
+.footer {
+  background-color: #e2e7fa;
+  padding: 34px 0 67px;
+}
+.footer__top {
+  margin: 0 170px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer__top__item {
+  width: 340px;
+}
+
+.footer__top__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #13274f;
+  line-height: 20px;
+  margin-bottom: 11px;
+}
+
+.footer__top__desc {
+  line-height: 20px;
+}
+
+.footer__bottom {
+  text-align: center;
+}
+/* footer end */
