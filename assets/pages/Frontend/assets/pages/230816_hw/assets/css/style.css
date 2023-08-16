@@ -21,16 +21,22 @@ body {
   font-size: 14px;
 }
 
-header {
+/* header start */
+
+.header {
   padding: 40px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header .logo {
+.header__logo {
   font-size: 30px;
   font-weight: 900;
+}
+
+.header__logo a {
+  color: #13274f;
 }
 
 nav ul {
@@ -47,7 +53,7 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
-.link {
+.header__link {
   font-size: 16px;
   color: #13274f;
   opacity: 0.6;
@@ -57,7 +63,7 @@ nav ul li:last-child {
   padding: 14px 10px;
 }
 
-.link::after {
+.header__link::after {
   content: "";
   height: 4px;
   width: 0px;
@@ -69,18 +75,35 @@ nav ul li:last-child {
   transition: all 0.4s;
 }
 
-.link:hover,
-.link.active {
+.header__link:hover,
+.header__link.active {
   opacity: 1;
 }
 
-.link:hover::after,
-.link.active::after {
+.header__link:hover::after,
+.header__link.active::after {
   content: "";
   width: 52px;
 }
 
+/* --------- on my view header start --------- */
+
+.header.my-view .header__logo {
+  font-weight: 800;
+}
+.header.my-view .header__link {
+  font-weight: 500;
+}
+.header.my-view .header__link::after {
+  height: 3px;
+}
+
+/* --------- on my view header end --------- */
+
+/* header end */
+
 /* hero section start */
+
 .hero {
   padding: 82px 0;
 }
@@ -157,6 +180,24 @@ nav ul li:last-child {
   border-color: #597fe2;
 }
 
+/* --------- on my view hero start --------- */
+
+.hero.my-view .hero__title {
+  font-weight: 600;
+}
+.hero.my-view .hero__desc {
+  font-weight: 300;
+}
+.hero.my-view .hero__down_links--item--link {
+  font-weight: 500;
+  border-width: 3px;
+}
+.hero.my-view .hero__down_links--item--info {
+  font-weight: 300;
+}
+
+/* --------- on my view hero end --------- */
+
 /* hero section end */
 
 /* footer start */
@@ -191,4 +232,125 @@ nav ul li:last-child {
 .footer__bottom {
   text-align: center;
 }
+
+/* --------- on my view footer start --------- */
+
+.footer.my-view .footer__top__title {
+  font-weight: 500;
+}
+.footer.my-view .footer__top__desc {
+  font-weight: 300;
+}
+.footer.my-view .footer__bottom__copy {
+  font-weight: 300;
+}
+
+/* --------- on my view footer end --------- */
+
 /* footer end */
+
+/* ------------- Elave --------------- */
+
+.go-back {
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: all 0.4s;
+  color: #211f1f;
+}
+.go-back:hover {
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------- */
+
+.indicator {
+  position: fixed;
+  bottom: 60px;
+  right: 25px;
+  width: 100px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2b2b2b;
+  transition: 0.3s;
+}
+
+.indicator.active {
+  background: #f8f8f8;
+  box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.253);
+}
+
+#indicator__toggle {
+  position: relative;
+  display: block;
+  width: 64px;
+  height: 32px;
+  border-radius: 32px;
+  background: #222;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#indicator__toggle .indicator__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#444),
+    to(#222)
+  );
+  background: linear-gradient(to bottom, #444, #222);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#indicator__toggle.active {
+  background: #fff;
+  -webkit-box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+}
+
+#indicator__toggle.active .indicator__btn {
+  left: 32px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#eaeaea),
+    to(#f9f9f9)
+  );
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+    inset 0 4px 4px rgb(255, 255, 255), inset 0 -4px 4px rgb(255, 255, 255);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), inset 0 4px 4px rgb(255, 255, 255),
+    inset 0 -4px 4px rgb(255, 255, 255);
+}
+
+/* -------------------------------------------------- */

@@ -1,0 +1,318 @@
+/*#region ==== Arima ==== */
+
+@font-face {
+  font-family: arima;
+  src: url(./Arima/Arima-Thin.ttf);
+  font-weight: 100;
+}
+
+.arima-100 {
+  font-family: arima !important;
+  font-weight: 100 !important;
+}
+
+@font-face {
+  font-family: arima;
+  src: url(./Arima/Arima-ExtraLight.ttf);
+  font-weight: 200;
+}
+
+.arima-200 {
+  font-family: arima !important;
+  font-weight: 200 !important;
+}
+
+@font-face {
+  font-family: arima;
+  src: url(./Arima/Arima-Light.ttf);
+  font-weight: 300;
+}
+
+.arima-300 {
+  font-family: arima !important;
+  font-weight: 300 !important;
+}
+
+@font-face {
+  font-family: arima;
+  src: url(./Arima/Arima-Regular.ttf);
+  font-weight: 400;
+}
+
+.arima-400 {
+  font-family: arima !important;
+  font-weight: 400 !important;
+}
+
+@font-face {
+  font-family: arima;
+  src: url(./Arima/Arima-Medium.ttf);
+  font-weight: 500;
+}
+
+.arima-500 {
+  font-family: arima !important;
+  font-weight: 500 !important;
+}
+
+@font-face {
+  font-family: arima;
+  src: url(./Arima/Arima-SemiBold.ttf);
+  font-weight: 600;
+}
+
+.arima-600 {
+  font-family: arima !important;
+  font-weight: 600 !important;
+}
+
+@font-face {
+  font-family: arima;
+  src: url(./Arima/Arima-Bold.ttf);
+  font-weight: 700;
+}
+
+.arima-700 {
+  font-family: arima !important;
+  font-weight: 700 !important;
+}
+
+/*#endregion */
+
+/*#region ==== Montserrat ==== */
+
+/* ----- Thin ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-Thin.ttf);
+  font-weight: 100;
+}
+
+.montserrat-100 {
+  font-family: montserrat !important;
+  font-weight: 100 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-ThinItalic.ttf);
+  font-weight: 100;
+  font-style: italic;
+}
+
+.montserrat-100_italic {
+  font-family: montserrat !important;
+  font-weight: 100 !important;
+  font-style: italic;
+}
+
+/* ----- ExtraLight ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-ExtraLight.ttf);
+  font-weight: 200;
+}
+
+.montserrat-200 {
+  font-family: montserrat !important;
+  font-weight: 200 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-ExtraLightItalic.ttf);
+  font-weight: 200;
+  font-style: italic;
+}
+
+.montserrat-200_italic {
+  font-family: montserrat !important;
+  font-weight: 200 !important;
+  font-style: italic;
+}
+
+/* ----- Light ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-Light.ttf);
+  font-weight: 300;
+}
+
+.montserrat-300 {
+  font-family: montserrat !important;
+  font-weight: 300 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-LightItalic.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+.montserrat-300_italic {
+  font-family: montserrat !important;
+  font-weight: 300 !important;
+  font-style: italic;
+}
+
+/* ----- Regular ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+.montserrat-400 {
+  font-family: montserrat !important;
+  font-weight: 400 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.montserrat-400_italic {
+  font-family: montserrat !important;
+  font-weight: 400 !important;
+  font-style: italic;
+}
+
+/* ----- Medium ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+.montserrat-500 {
+  font-family: montserrat !important;
+  font-weight: 500 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-MediumItalic.ttf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.montserrat-500_italic {
+  font-family: montserrat !important;
+  font-weight: 500 !important;
+  font-style: italic;
+}
+
+/* ----- SemiBold ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+}
+
+.montserrat-600 {
+  font-family: montserrat !important;
+  font-weight: 600 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-SemiBoldItalic.ttf);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.montserrat-600_italic {
+  font-family: montserrat !important;
+  font-weight: 600 !important;
+  font-style: italic;
+}
+
+/* ----- Bold ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+
+.montserrat-700 {
+  font-family: montserrat !important;
+  font-weight: 700 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.montserrat-700_italic {
+  font-family: montserrat !important;
+  font-weight: 700 !important;
+  font-style: italic;
+}
+
+/* ----- ExtraBold ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+.montserrat-800 {
+  font-family: montserrat !important;
+  font-weight: 800 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-ExtraBoldItalic.ttf);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.montserrat-800_italic {
+  font-family: montserrat !important;
+  font-weight: 800 !important;
+  font-style: italic;
+}
+
+/* ----- Black ----- */
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-Black.ttf);
+  font-weight: 900;
+}
+
+.montserrat-900 {
+  font-family: montserrat !important;
+  font-weight: 900 !important;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(./Montserrat/Montserrat-BlackItalic.ttf);
+  font-weight: 900;
+  font-style: italic;
+}
+
+.montserrat-900_italic {
+  font-family: montserrat !important;
+  font-weight: 900 !important;
+  font-style: italic;
+}
+
+/*#endregion */

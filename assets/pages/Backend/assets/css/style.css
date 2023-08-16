@@ -58,6 +58,10 @@ h1:after {
     5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
 }
 
+h1:focus-visible {
+  outline: none;
+}
+
 .go-home {
   display: block;
   width: 200px;

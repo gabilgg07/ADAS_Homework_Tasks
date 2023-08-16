@@ -15,6 +15,11 @@ a:hover {
   text-decoration: none;
 }
 
+body {
+  font-family: montserrat, sans-serif, serif;
+  background-color: #ecffff;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -24,6 +29,20 @@ a:hover {
   margin-top: 100px;
   text-align: center;
   font-size: 44px;
+  background: linear-gradient(
+    to bottom,
+    /* #cfc09f 22%,
+    #634f2c 24%,
+    #cfc09f 26%,
+    #cfc09f 27%,
+    #ffecb3 40%,
+    #3a2c0f 78% */
+      rgb(35, 157, 123),
+    rgb(0, 191, 255)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
 }
 
 ul.links {
@@ -31,6 +50,7 @@ ul.links {
 }
 
 .link {
+  font-family: arima, sans-serif, serif;
   font-size: 24px;
   color: rgb(35, 157, 123);
   transition: transform 0.4s;
@@ -38,9 +58,31 @@ ul.links {
   padding: 10px 15px;
   border: 1px solid rgba(128, 128, 128, 0.489);
   border-radius: 4px;
+  position: relative;
+  background-color: #fff;
+  z-index: 6;
+}
+
+.link::before {
+  content: "";
+  width: 0px;
+  height: 40px;
+  background: linear-gradient(rgb(35, 157, 123), rgb(0, 191, 255));
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 0;
+  z-index: -3;
+  transition: all 0.4s;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 .links li:hover .link {
-  transform: translateX(15px);
+  transform: translateX(50px);
+}
+
+.links li:hover .link::before {
+  width: 50px;
+  transform: translateX(-50px);
 }
 
 .go-home {
