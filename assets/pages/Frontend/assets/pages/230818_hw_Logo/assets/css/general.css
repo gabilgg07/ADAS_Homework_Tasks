@@ -1,7 +1,26 @@
+/*#region BUTTONS */
 .btn {
   display: inline-block;
   cursor: pointer;
   font-family: inherit;
+  position: relative;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  opacity: 0;
+  filter: blur(1rem);
+  z-index: -1;
+  transform: scale(0.75);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.btn:hover::after {
+  opacity: 0.75;
 }
 
 .btn-main {
@@ -13,3 +32,140 @@
   background-color: var(--color-secondary);
   color: var(--color-black);
 }
+/*#endregion BUTTONS */
+
+/*#region HEADER START */
+
+.header {
+  padding: 2.5rem 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  opacity: 0.24;
+  text-transform: uppercase;
+  position: relative;
+}
+.header__logo.clicked {
+  animation: logoAnimation 2s;
+}
+
+.header__menu ul {
+  display: flex;
+  align-items: center;
+  gap: 5.6rem;
+}
+
+.header__menu--item {
+  transition: all 0.4s;
+}
+.header__menu--item:hover {
+  transform: scale(1.05);
+  text-shadow: 0 4px 1px rgba(0, 0, 0, 0.3);
+}
+
+.header__actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__actions--btn {
+  padding: 1.3rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.header__actions--btn::after {
+  background: var(--color-main);
+}
+
+/*#endregion HEADER END */
+
+/*#region RESPONSIBILITY START */
+
+@media only screen and (max-width: 1200px) {
+  .header__menu ul {
+    gap: 3.6rem;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .header {
+    padding: 2.5rem;
+    gap: 1.5rem;
+  }
+  .header__logo {
+    font-size: 2rem;
+  }
+  .header__menu ul {
+    gap: 2.6rem;
+  }
+  .header__menu--item {
+    font-size: 1.6rem;
+  }
+  .header__actions--btn {
+    padding: 1rem 1.4rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 575px) {
+}
+@media only screen and (max-width: 479px) {
+  .header__menu ul {
+    flex-direction: column;
+  }
+
+  .header__actions {
+    flex-direction: column;
+  }
+
+  .header__actions--btn {
+    font-size: 1.6rem;
+  }
+}
+
+/*#endregion RESPONSIBILITY END */
+
+/*#region ANIMATIONS */
+
+@keyframes logoAnimation {
+  0% {
+    left: 0rem;
+    top: 0rem;
+    transform: rotate(0deg);
+    opacity: 0.4;
+  }
+  10% {
+    left: -2rem;
+    top: 0rem;
+    transform: rotate(30deg);
+    opacity: 1;
+  }
+  50% {
+    left: 100rem;
+    top: 2rem;
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+  75% {
+    left: -100rem;
+    top: 2rem;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    left: 0rem;
+    top: 0rem;
+    opacity: 0.24;
+    transform: rotate(0deg);
+  }
+}
+
+/*#endregion  */

@@ -3,6 +3,7 @@
 :root {
   --color-black: #000000;
   --color-main: #14203e;
+  --color-border: #f4e8d8;
   --color-secondary: #f6f0e8;
   --color-bg-secondary: #fffcf8;
   --color-white: #ffffff;
@@ -31,7 +32,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 1.8rem;
-  line-height: 2.34rem;
+  line-height: 2.7rem;
   color: var(--color-main);
   background-color: var(--color-white);
   overflow-x: hidden;
@@ -41,6 +42,7 @@ body {
   width: 100%;
   max-width: var(--container-width-main);
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 img {
@@ -57,6 +59,7 @@ ol {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 h1 {

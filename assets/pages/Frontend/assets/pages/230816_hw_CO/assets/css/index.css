@@ -86,47 +86,8 @@
 
 /*#endregion HERO END */
 
-/*#region FOOTER START */
-
-.footer {
-  background-color: #e2e7fa;
-  padding: 6.7rem 0 3.5rem;
-}
-.footer__top {
-  padding: 0 5.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  gap: 11rem;
-  margin-bottom: 6rem;
-}
-
-.footer__top--title {
-  margin-bottom: 1rem;
-}
-
-.footer__top--desc {
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-
-.footer__bottom {
-  text-align: center;
-}
-
-.footer__bottom--copy {
-  font-size: 1.4rem;
-  opacity: 0.6;
-}
-
-/*#endregion FOOTER START */
-
 /*#region RESPONSIBILITY START */
 
-@media only screen and (max-width: 1399px) {
-  /* .hero__download {
-    gap: 5rem;
-  } */
-}
 @media only screen and (max-width: 1199px) {
   .hero__download {
     gap: 6.2rem;
@@ -140,10 +101,6 @@
   .hero__download--item--info {
     font-size: 1.2rem;
     line-height: 1.6rem;
-  }
-
-  .footer__top {
-    gap: 4rem;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -161,10 +118,6 @@
   .hero__download--box:hover .hero__download--box--shadow {
     opacity: 0.2;
     transform: translateY(10%) scale(0.9);
-  }
-
-  .footer {
-    padding: 3.5rem 0;
   }
 }
 @media only screen and (max-width: 766px) {
@@ -196,17 +149,6 @@
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
-  .footer__top {
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding: 0 2.5rem;
-  }
-  .footer__top--title {
-    font-size: 1.4rem;
-  }
-  .footer__top--desc {
-    font-size: 1.2rem;
-  }
 }
 @media only screen and (max-width: 479px) {
   .hero__head {
@@ -232,17 +174,6 @@
   border-width: 2px;
 }
 .hero.my-view .hero__download--item--info {
-  font-weight: 300;
-}
-
-/* ---- FOOTER ---- */
-.footer.my-view .footer__top--title {
-  font-weight: 500;
-}
-.footer.my-view .footer__top--desc {
-  font-weight: 300;
-}
-.footer.my-view .footer__bottom--copy {
   font-weight: 300;
 }
 
