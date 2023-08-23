@@ -15,6 +15,10 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  min-width: 100%;
+}
+
 body {
   font-family: montserrat, sans-serif, serif;
   background-color: #ecffff;
@@ -23,23 +27,14 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .title {
   margin-top: 100px;
   text-align: center;
   font-size: 44px;
-  background: linear-gradient(
-    to bottom,
-    /* #cfc09f 22%,
-    #634f2c 24%,
-    #cfc09f 26%,
-    #cfc09f 27%,
-    #ffecb3 40%,
-    #3a2c0f 78% */
-      rgb(35, 157, 123),
-    rgb(0, 191, 255)
-  );
+  background: linear-gradient(to bottom, rgb(35, 157, 123), rgb(0, 191, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #fff;
@@ -47,6 +42,13 @@ body {
 
 ul.links {
   margin-top: 50px;
+}
+
+ul.links li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .link {
@@ -66,10 +68,11 @@ ul.links {
 .link::before {
   content: "";
   width: 0px;
-  height: 40px;
+  height: 70%;
   background: linear-gradient(rgb(35, 157, 123), rgb(0, 191, 255));
   position: absolute;
-  top: calc(50% - 20px);
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   z-index: -3;
   transition: all 0.4s;
@@ -77,12 +80,12 @@ ul.links {
   border-bottom-left-radius: 6px;
 }
 .links li:hover .link {
-  transform: translateX(50px);
+  transform: translateX(30px);
 }
 
 .links li:hover .link::before {
-  width: 50px;
-  transform: translateX(-50px);
+  transform: translate(-100%, -50%);
+  width: 30px;
 }
 
 .go-home {
@@ -95,8 +98,8 @@ ul.links {
   color: rgba(128, 128, 128, 0.757);
   border: 1px solid rgba(128, 128, 128, 0.757);
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 2%;
+  right: 2%;
   transition: all 0.4s;
   transform: scale(0.7);
   z-index: 999;
@@ -107,4 +110,25 @@ ul.links {
   border-color: black;
   color: black;
   transform: scale(1.1);
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 32px;
+  }
+  .icon-box {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .link {
+    font-size: 18px;
+    padding: 8px 10px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
 }

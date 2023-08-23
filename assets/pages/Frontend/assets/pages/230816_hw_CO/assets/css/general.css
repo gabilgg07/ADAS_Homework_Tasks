@@ -1,0 +1,127 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-main {
+  border: 3px solid var(--color-bg-light);
+  color: var(--color-light);
+  background-color: var(--color-white);
+  transition: all 0.4s;
+}
+
+.btn-main:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/*#region HEADER START */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.7rem 4.8rem;
+  gap: 15px;
+}
+.header__logo {
+  text-transform: uppercase;
+  letter-spacing: 2.25px;
+  font-size: 3rem;
+  color: var(--color-black);
+  font-weight: 900;
+}
+.header__menu ul {
+  display: flex;
+  align-items: center;
+  gap: 5.5rem;
+}
+
+.header__menu--item {
+  font-weight: 600;
+  opacity: 0.6;
+  position: relative;
+}
+
+.header__menu--item a {
+  color: var(--color-main);
+}
+
+.header__menu--item::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0.4rem;
+  background-color: var(--color-secondary);
+  border-radius: 2.5rem;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.4s;
+}
+
+.header__menu--item.active,
+.header__menu--item:hover {
+  opacity: 1;
+}
+
+.header__menu--item.active::after,
+.header__menu--item:hover::after {
+  width: 5.2rem;
+}
+
+/*#endregion HEADER END */
+
+/*#region FOOTER START */
+
+/*#endregion FOOTER END */
+
+/*#region RESPONSIBILITY START */
+
+@media only screen and (max-width: 1399px) {
+}
+@media only screen and (max-width: 1199px) {
+}
+@media only screen and (max-width: 991px) {
+  .header {
+    padding: 2.5rem;
+  }
+  .header__menu ul {
+    gap: 2.5rem;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .header {
+    flex-direction: column;
+  }
+  .header__menu--item a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .header__menu ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .header__menu--item {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 479px) {
+}
+
+/*#endregion RESPONSIBILITY END */
+
+/*#region ON MY VIEW */
+.header.my-view .header__logo {
+  font-weight: 800;
+}
+.header.my-view .header__menu--item {
+  font-weight: 500;
+}
+.header.my-view .header__menu--item::after {
+  height: 0.3rem;
+}
+/*#endregion ON MY VIEW */

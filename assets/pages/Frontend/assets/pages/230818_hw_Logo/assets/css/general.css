@@ -1,0 +1,15 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-main {
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+}

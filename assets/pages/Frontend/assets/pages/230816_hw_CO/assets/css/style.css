@@ -1,0 +1,74 @@
+@import url(../fonts/font.css);
+
+:root {
+  --color-black: #000000;
+  --color-main: #13274f;
+  --color-secondary: #597fe2;
+  --color-light: #6d7593;
+  --color-bg-main: #e2e7fa;
+  --color-bg-light: #eef1fc;
+  --color-white: #ffffff;
+  --main-font: "Montserrat", sans-serif, serif;
+  --container-width-main: 131rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: 0;
+  border: 0;
+}
+
+html {
+  box-sizing: border-box;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: var(--color-main);
+  background-color: var(--color-bg-light);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width-main);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 5.1rem;
+  color: var(--color-black);
+}
+
+h4 {
+  font-weight: 600;
+}
