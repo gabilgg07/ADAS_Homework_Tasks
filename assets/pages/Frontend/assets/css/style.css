@@ -51,6 +51,15 @@ ul.links li {
   margin-bottom: 10px;
 }
 
+.circle_box {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
 .link {
   font-family: arima, sans-serif, serif;
   font-size: 24px;
