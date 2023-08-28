@@ -23,11 +23,32 @@ showSalaryCalc.addEventListener("click", function () {
               calcsSalary
           );
 
+          let salary;
+          do {
+            salary = parseInt(prompt("Aylıq maaşınızı daxil edin:"));
+            if (isNaN(salary)) {
+              alert("Maaş düzgün daxil edilməyib");
+            }
+          } while (isNaN(salary));
+
           if (calcSalaryCoice !== null) {
             calcSalaryCoice = parseInt(calcSalaryCoice);
             switch (calcSalaryCoice) {
               case 1:
-                alert("You selected Option 1");
+                let days;
+                do {
+                  days = parseInt(
+                    prompt("İşlədiyiniz günlərin sayını daxil edin:")
+                  );
+                  if (isNaN(days)) {
+                    alert("Gün sayı düzgün daxil edilməyib");
+                  }
+                } while (isNaN(days));
+
+                let totalSalary = days * (salary / 30);
+
+                alert(`Alacağınız maaş miqdarı: ${totalSalary}`);
+
                 return;
               case 2:
                 alert("You selected Option 2");
@@ -72,6 +93,7 @@ showSalaryCalc.addEventListener("click", function () {
               if (height > 0) {
                 let bmi = weight / (height / 100) ** 2;
                 alert(`Bədən Kütlə İndeksiniz: ${bmi.toFixed(1)}`);
+                return;
               } else {
               }
             } else {
