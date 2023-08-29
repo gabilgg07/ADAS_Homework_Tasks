@@ -33,26 +33,79 @@ showSalaryCalc.addEventListener("click", function () {
 
           if (calcSalaryCoice !== null) {
             calcSalaryCoice = parseInt(calcSalaryCoice);
+            let months;
+            let days;
+            let hours;
+            let totalSalary;
             switch (calcSalaryCoice) {
               case 1:
-                let days;
+                do {
+                  months = parseInt(
+                    prompt(
+                      "İşlədiyiniz ayların sayını daxil edin (yoxdursa 0 daxil edin):"
+                    )
+                  );
+                  if (isNaN(months)) {
+                    alert("Say düzgün daxil edilməyib");
+                  }
+                } while (isNaN(months));
+
                 do {
                   days = parseInt(
-                    prompt("İşlədiyiniz günlərin sayını daxil edin:")
+                    prompt(
+                      "İşlədiyiniz günlərin sayını daxil edin (yoxdursa 0 daxil edin):"
+                    )
                   );
                   if (isNaN(days)) {
-                    alert("Gün sayı düzgün daxil edilməyib");
+                    alert("Say düzgün daxil edilməyib");
                   }
                 } while (isNaN(days));
 
-                let totalSalary = days * (salary / 30);
+                totalSalary = months * salary + days * (salary / 26);
 
-                alert(`Alacağınız maaş miqdarı: ${totalSalary}`);
+                alert(`Alacağınız maaş miqdarı: ${totalSalary.toFixed(2)}`);
 
                 return;
               case 2:
-                alert("You selected Option 2");
-                break;
+                do {
+                  months = parseInt(
+                    prompt(
+                      "İşlədiyiniz ayların sayını daxil edin (yoxdursa 0 daxil edin):"
+                    )
+                  );
+                  if (isNaN(months)) {
+                    alert("Say düzgün daxil edilməyib");
+                  }
+                } while (isNaN(months));
+
+                do {
+                  days = parseInt(
+                    prompt(
+                      "İşlədiyiniz günlərin sayını daxil edin (yoxdursa 0 daxil edin):"
+                    )
+                  );
+                  if (isNaN(days)) {
+                    alert("Say düzgün daxil edilməyib");
+                  }
+                } while (isNaN(days));
+
+                do {
+                  hours = parseInt(
+                    prompt(
+                      "İşlədiyiniz saatların sayını daxil edin (yoxdursa 0 daxil edin):"
+                    )
+                  );
+                  if (isNaN(hours)) {
+                    alert("Say düzgün daxil edilməyib");
+                  }
+                } while (isNaN(hours));
+
+                totalSalary =
+                  months * salary + (days * 8 + hours) * (salary / 208);
+
+                alert(`Alacağınız maaş miqdarı: ${totalSalary.toFixed(2)}`);
+
+                return;
               default:
                 alert("Yanlış seçim");
             }
@@ -113,12 +166,4 @@ showSalaryCalc.addEventListener("click", function () {
       alert("İmtina etdiniz");
     }
   } while (calcCoice !== 3 && calcCoice !== null);
-
-  // LABEL1: do {
-  //   x = x + 2;
-  //   // JUMP TO THE END OF THE DO-WHILE - A FORWARDS GOTO
-  //   if (x < 100) break LABEL1;
-  //   // JUMP TO THE START OF THE DO WHILE - A BACKWARDS GOTO...
-  //   if (x < 100) continue LABEL1;
-  // } while(0);
 });
