@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/icons/post_24x24.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <title>JS Posts Page</title>
+  </head>
+  <body>
+   
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="./index.html">Logo</a>
+          </div>
+          <div class="header__search">
+            <p class="header__serach--counts">
+              Result <strong>30</strong> posts
+            </p>
+            <input type="text" class="header__search--input" placeholder="Search POSTs">
+            <button class="header__search--btn">Search</button>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <main>
+      <section class="addPost">
+        <div class="container">
+          <div class="addPost__wrapper">
+            <input type="text" class="addPost__title" placeholder="Enter Title">
+            <textarea name="" id="" cols="30" rows="10" class="addPost__desc" placeholder="Enter Description"></textarea>
+            <button class="addPost__btn">Add Post</button>
+          </div>
+        </div>
+      </section>
+      <section class="postCards">
+        <div class="container">
+          <div class="postCards__wrapper">
+            <article class="postCards__item">
+              <p class="postCards__item--title">
+                <strong>Title: </strong><span class="postCards__item--title--txt">Title 1</span>
+              </p>
+              <p class="postCards__item--desc">
+                <strong>Description: </strong><span class="postCards__item--desc--txt">Description 1</span>
+              </p>
+              <p class="postCards__item--date">
+                <strong>CreatedDate: </strong><span class="postCards__item--date--txt">07.07.2023 11:24:27</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="postList">
+        <div class="container">
+          <ul class="postList__wrapper">
+            <li class="postList__item">
+              <p class="postList__item--title">
+                <strong>Title: </strong><span class="postList__item--title--txt">Title 1</span>
+              </p>
+              <p class="postList__item--desc">
+                <strong>Description: </strong><span class="postList__item--desc--txt">Description 1</span>
+              </p>
+              <p class="postList__item--date">
+                <strong>CreatedDate: </strong><span class="postList__item--date--txt">07.07.2023 11:24:27</span>
+              </p>
+              <button class="postList__item--btn">DELETE</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <p class="footer__copy">@Copy.All privacy reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="additional">
+      <a href="../../../index.html" class="additional__goback">
+        &#8592; Go Back</a
+      >
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
