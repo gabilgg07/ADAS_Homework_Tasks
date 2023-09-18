@@ -1,13 +1,139 @@
-
-.container{
-    width: 100%;
-    padding: 0 10%;
+body {
+  font-family: "Verdana", system-ui, -apple-system, sans-serif;
 }
 
-[class*="__wrapper"]{
-    margin: 20px  0;
-    padding: 15px;
-    border: 3px solid #050607;
-    border-radius: 6px;
+input,
+textarea {
+  font-family: inherit;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
 }
 
+button {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  padding: 0 10%;
+}
+
+[class*="__wrapper"] {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 0.3rem solid #050607;
+  border-radius: 0.6rem;
+}
+
+/*#region Header */
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__logo a {
+  font-size: 3.2rem;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__serach--counts {
+  margin-right: 3rem;
+  font-size: 1.3rem;
+}
+
+.header__serach--counts strong {
+  font-size: 1.6rem;
+}
+
+/*#endregion Header */
+
+/*#region AddPost */
+
+.addPost__wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 6fr 1fr;
+  gap: 2rem;
+}
+
+/*#endregion AddPost */
+
+/*#region PostCards */
+
+.postCards__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.postCards__item {
+  padding: 1.5rem 1rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.postCards__item p {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: rgb(129, 121, 121);
+}
+.postCards__item p strong {
+  font-size: 1.4rem;
+  color: black;
+}
+
+/*#endregion PostCards */
+
+/*#region PostList */
+
+.postList__wrapper {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.postList__item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 200px 1fr 280px 100px;
+  gap: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.postList__item p {
+  font-size: 1.1rem;
+  color: #938c8c;
+}
+
+.postList__item p strong {
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.postList__item--btn {
+  justify-self: flex-end;
+}
+
+/*#endregion PostList */
+
+/*#region Footer */
+
+.footer__copy {
+  text-align: center;
+}
+
+/*#endregion Footer */
