@@ -11,7 +11,7 @@ let arrImg = [
   "10.jpg",
 ];
 const changeSliderType = document.querySelector(".change-slider-type");
-let isToDownn = true;
+let isToDownn = false;
 
 let prev;
 let next;
@@ -31,21 +31,12 @@ imgBox.style.left = "0px";
 
 const image = document.createElement("img");
 image.src = path + arrImg[0];
+imgBox.append(image);
 
 const number = document.createElement("span");
-number.style.display = "inline-block";
-number.style.fontSize = "10vw";
-number.style.color = "white";
-number.style.textShadow = "black 1px 2px 3px";
-number.style.position = "absolute";
-number.style.top = "50%";
-number.style.left = "50%";
-number.style.transform = "translate(-50%, -50%)";
-
 number.textContent = 1;
-
-imgBox.append(image);
 imgBox.append(number);
+
 imgsWrapper.append(imgBox);
 
 let currentView = imgBox;
@@ -64,21 +55,12 @@ function createNewImage(index, isPrev) {
 
   const image = document.createElement("img");
   image.src = path + arrImg[index];
+  imgBox.append(image);
 
   const number = document.createElement("span");
-  number.style.display = "inline-block";
-  number.style.fontSize = "10vw";
-  number.style.color = "white";
-  number.style.textShadow = "black 1px 2px 3px";
-  number.style.position = "absolute";
-  number.style.top = "50%";
-  number.style.left = "50%";
-  number.style.transform = "translate(-50%, -50%)";
-
   number.textContent = index + 1;
-
-  imgBox.append(image);
   imgBox.append(number);
+
   imgsWrapper.append(imgBox);
 
   return imgBox;

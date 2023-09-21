@@ -44,8 +44,24 @@ img {
   object-fit: cover;
 }
 
+.image span {
+  display: inline-block;
+  font-size: 10vw;
+  color: white;
+  text-shadow: black 1px 2px 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 button {
   padding: 5px 40px;
+}
+
+.prev,
+.next {
+  font-size: 26px;
 }
 
 .change-btn-box {
