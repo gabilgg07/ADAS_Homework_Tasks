@@ -27,12 +27,10 @@ a:hover {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: 200px 200px; */
 }
 
 .posts-wrapper article {
   padding: 10px;
-  margin: 10px 0;
   border: 3px solid black;
 }
 
@@ -66,6 +64,23 @@ a:hover {
 .post_item h2 {
   margin-bottom: 5px;
   font-size: 18px;
+}
+
+/* responsibility */
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 5%;
+  }
+  .posts-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .posts-wrapper {
+    grid-template-columns: none;
+  }
 }
 
 /*#region ------------- Additional --------------- */
