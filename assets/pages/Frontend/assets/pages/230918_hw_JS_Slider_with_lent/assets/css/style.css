@@ -45,7 +45,7 @@ img {
 }
 
 .slider__image {
-  width: 700px;
+  /* width: 700px; */
   height: 500px;
   position: relative;
 }
@@ -62,7 +62,7 @@ img {
   color: white;
   text-shadow: black 1px 2px 3px;
   position: absolute;
-  bottom: -5%;
+  bottom: 5%;
   right: 5%;
 }
 
@@ -84,6 +84,20 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+/* responsible */
+
+@media only screen and (max-width: 480px) {
+  .slider__wrapper {
+    height: 400px;
+  }
+  .slider__image {
+    height: 400px;
+  }
+  .slider__image--num {
+    bottom: auto;
+  }
 }
 
 /*#region ------------- Additional --------------- */

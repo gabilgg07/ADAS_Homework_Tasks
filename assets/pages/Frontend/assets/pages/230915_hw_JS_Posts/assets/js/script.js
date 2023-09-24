@@ -27,50 +27,61 @@ if (!posts) {
   posts = [
     {
       id: counter++,
-      title: "Title 1",
-      description: "Description 1",
+      title: "Title 1: Lorem ipsum dolor sit amet.",
+      description:
+        "Description 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem impedit eveniet vitae corrupti minus, sit ipsum, at a totam, ratione eligendi omnis mollitia reiciendis?",
       createdDate: new Date(),
     },
     {
       id: counter++,
-      title: "Title 2",
-      description: "Description 2",
+      title:
+        "Title 2: Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      description:
+        "Description 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere maxime delectus nesciunt ipsam asperiores sunt, aliquid eligendi totam aliquam placeat iure earum amet eos repellat? Veritatis dolor totam sapiente quia!",
       createdDate: new Date(),
     },
     {
       id: counter++,
-      title: "Title 3",
-      description: "Description 3",
+      title: "Title 3: Lorem, ipsum dolor.",
+      description:
+        "Description 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ducimus quidem eveniet nobis reprehenderit quibusdam ut.",
       createdDate: new Date(),
     },
     {
       id: counter++,
-      title: "Title 4",
-      description: "Description 4",
+      title:
+        "Title 4: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, culpa eaque.",
+      description:
+        "Description 4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illum, porro molestiae dolor placeat sed quod cumque maxime, libero repudiandae vel dolore.",
       createdDate: new Date(),
     },
     {
       id: counter++,
-      title: "Title 5",
-      description: "Description 5",
+      title: "Title 5: Lorem ipsum dolor sit amet consectetur.",
+      description:
+        "Description 5: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore obcaecati explicabo vitae consequuntur similique ut ipsam, suscipit sint dicta sit error provident molestias corporis nobis facere porro? Autem.",
       createdDate: new Date(),
     },
     {
       id: counter++,
-      title: "Title 6",
-      description: "Description 6",
+      title: "Title 6: Lorem ipsum dolor sit.",
+      description:
+        "Description 6: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facere quia aliquid commodi eligendi culpa quisquam necessitatibus illo aliquam laborum mollitia ratione veniam sed sint consequuntur alias suscipit quasi modi quaerat ea aperiam molestias, in veritatis eos. Nam fugit neque minima! Assumenda.",
       createdDate: new Date(),
     },
     {
       id: counter++,
-      title: "Title 7",
-      description: "Description 7",
+      title:
+        "Title 7: Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+      description:
+        "Description 7: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam necessitatibus ducimus animi fugit itaque veritatis maxime in non incidunt.",
       createdDate: new Date(),
     },
     {
       id: counter++,
-      title: "Title 8",
-      description: "Description 8",
+      title: "Title 8: Lorem, ipsum dolor sit amet consectetur adipisicing.",
+      description:
+        "Description 8: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione aperiam molestias, nesciunt aliquam aspernatur et totam inventore?",
       createdDate: new Date(),
     },
   ];
@@ -156,6 +167,9 @@ addPost__btn.addEventListener("click", function () {
   posts.unshift(newPost);
 
   refreshPosts(posts);
+
+  addPost__title.value = "";
+  addPost__desc.value = "";
 });
 
 // functions
@@ -254,7 +268,7 @@ function showPostList(arr) {
 
     const postList__item__desc__txt = document.createElement("span");
     postList__item__desc__txt.className = "postList__item--desc--txt";
-    postList__item__desc__txt.textContent = subTxt(post.description, 75);
+    postList__item__desc__txt.textContent = subTxt(post.description, 85);
     postList__item__desc.append(postList__item__desc__txt);
 
     postList__item.append(postList__item__desc);

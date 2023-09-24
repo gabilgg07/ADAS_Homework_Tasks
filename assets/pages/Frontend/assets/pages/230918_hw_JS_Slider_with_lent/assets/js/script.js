@@ -10,10 +10,10 @@ let arrImg = [
   "09.jpg",
   "10.jpg",
   "11.jpg",
-  "12.jpg",
-  "13.jpg",
-  "14.jpg",
-  "15.jpg",
+  "12.JPG",
+  "13.JPG",
+  "14.JPG",
+  "15.JPG",
   "16.jpg",
   "17.jpg",
   "18.jpg",
@@ -44,6 +44,7 @@ function createItem(item, index, isAppend) {
   const slider__image = document.createElement("div");
   slider__image.className = "slider__image";
   slider__image.dataset.index = index;
+  slider__image.style.width = withSlider + "px";
 
   const image = document.createElement("img");
   image.src = path + item;
