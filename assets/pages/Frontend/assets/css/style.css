@@ -41,7 +41,7 @@ body {
 }
 
 ul.links {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 ul.links li {
@@ -137,7 +137,4 @@ ul.links li {
     padding: 8px 10px;
     line-height: 20px;
   }
-}
-
-@media only screen and (max-width: 575px) {
 }

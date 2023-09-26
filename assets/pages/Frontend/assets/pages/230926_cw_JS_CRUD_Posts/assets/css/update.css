@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.id {
+  font-size: 5vw;
+  color: #7c3ae4;
+}
+.title {
+  font-size: 3vw;
+  padding: 10px;
+  border-radius: 10px;
+  width: 60%;
+}
+.desc {
+  font-size: 2vw;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.date {
+  font-size: 1.5vw;
+}
+button {
+  padding: 5px 30px;
+  font-size: 18px;
+  color: #fff;
+}
+.edit {
+  background-color: #faae20;
+}
+.cancel {
+  background-color: #fd4343;
+}

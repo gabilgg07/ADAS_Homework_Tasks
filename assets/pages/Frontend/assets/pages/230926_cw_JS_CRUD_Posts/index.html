@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/images/icons/api_24x24.png" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>CRUD with API Posts</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post-add-box">
+        <input type="text" class="title" placeholder="Title Post" />
+        <textarea class="desc" placeholder="Description Post"></textarea>
+        <button class="btn-add">Creat Post</button>
+      </div>
+      <table class="post-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th class="thDesc">Description</th>
+            <th class="thDate">Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Title 1Title 1Title 1Title 1Title</td>
+            <td class="tdDesc">
+              Description 1Description 1Description 1Description 1Description
+              1Description 1Description 1Description
+            </td>
+            <td class="tdDate">09/25/2023</td>
+            <td>
+              <div class="actions">
+                <a href="/update/1" class="edit">Edit</a>
+                <a class="delete">Delete</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="additional">
+      <a href="../../../index.html" class="additional__goback">
+        &#8592; Go Back</a
+      >
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
