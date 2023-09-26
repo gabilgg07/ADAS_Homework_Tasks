@@ -1,6 +1,7 @@
 const idFromHref = new URLSearchParams(window.location.search);
 const id = idFromHref.get("id");
 const url = "https://posts-api-e5vx.onrender.com/posts";
+const loader = document.querySelector(".loader");
 
 const pId = document.querySelector(".id");
 const title = document.querySelector(".title");
@@ -19,6 +20,7 @@ getPost(id).then((post) => {
   title.value = post.title;
   desc.value = post.body;
   date.textContent = new Date(post.createdDate).toLocaleDateString();
+  loader.style.display = "none";
 });
 
 edit.addEventListener("click", function () {

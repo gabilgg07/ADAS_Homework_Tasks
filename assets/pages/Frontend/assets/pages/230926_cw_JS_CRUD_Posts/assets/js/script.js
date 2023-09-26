@@ -1,5 +1,6 @@
 const url = "https://posts-api-e5vx.onrender.com/posts";
 const tbody = document.querySelector(".post-table tbody");
+const loader = document.querySelector(".loader");
 
 async function getPosts() {
   const res = await fetch(url);
@@ -8,6 +9,7 @@ async function getPosts() {
 
 getPosts().then((posts) => {
   fillTable(posts);
+  loader.style.display = "none";
 });
 
 function fillTable(arr) {
@@ -57,13 +59,7 @@ function fillTable(arr) {
   });
 }
 
-const postExp = {
-  title: "Title 5",
-  body: "Body 5",
-  createdDate: new Date(),
-};
-
-async function createPost(post = postExp) {
+async function createPost(post) {
   const res = await fetch(url, {
     method: "POST",
     headers: {
